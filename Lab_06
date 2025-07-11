@@ -1,0 +1,33 @@
+-- Questão 1
+--
+-- Obtenha, para cada código de cada departamento, o total gasto com salário 
+-- pago aos funcionários, bem como a média salarial de cada departamento.
+
+select cod_depto, sum (Salario) as soma
+from funcionario
+group by cod_depto;
+
+select avg (salario) as Media_depto_1
+from funcionario
+where (cod_depto = 1);
+
+select avg (salario) as Media_depto_2
+from funcionario
+where (cod_depto = 2);
+
+select avg (salario) as Media_depto_3
+from funcionario
+where (cod_depto = 3);
+
+select avg (salario) as Media_depto_4
+from funcionario
+where (cod_depto = 4);
+
+-- Questão 2
+--
+-- Obtenha somente o código dos departamentos que possuem uma quantidade 
+-- de funcionários entre 2 e 10 funcionários.
+
+select cod_depto 
+from funcionario
+where (cod_depto between 2 and 10);
